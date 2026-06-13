@@ -15,8 +15,15 @@ import lombok.Data;
 public class UserCreateDto {
 
     @NotBlank(message = "El nombre de usuario es obligatorio")
-    @Size(min = 3, max = 20, message = "El nombre de usuario debe tener entre 3 y 20 caracteres")
-    @Pattern(regexp = "^[A-Za-zÁÉÍÓÚáéíóúÑñ\\.\\s]+$", message = "El nombre de usuario solo puede contener letras, espacios y puntos")
+    @Size(
+            min = 3,
+            max = 20,
+            message = "El nombre de usuario debe tener entre 3 y 20 caracteres"
+    )
+    @Pattern(
+            regexp = "^[A-Za-z0-9ÁÉÍÓÚáéíóúÑñ._-]+$",
+            message = "El nombre de usuario solo puede contener letras, números, puntos, guiones y guion bajo"
+    )
     private String username;
 
     @NotBlank(message = "El nombre es obligatorio")

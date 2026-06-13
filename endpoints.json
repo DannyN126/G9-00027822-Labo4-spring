@@ -1,0 +1,480 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_4b5823a6896e48b5b995d2d1aa9ba623
+  created: 1781380717386
+  modified: 1781380717386
+  description: ""
+collection:
+  - url: http://localhost:4000/api/auth/signup
+    name: signup
+    meta:
+      id: req_ca4d3df3be4641a0b592261cb5f341df
+      created: 1781380717549
+      modified: 1781381044323
+      isPrivate: false
+      description: ""
+      sortKey: -1781380717549
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "admin123",
+          "name": "Administrador",
+          "surname": "Principal",
+          "email": "admin123@gmail.com",
+          "password": "Admin123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/api/auth/login
+    name: login
+    meta:
+      id: req_9a1e122832a0454fbb775d7e32c8bb2c
+      created: 1781380934712
+      modified: 1781384794308
+      isPrivate: false
+      description: ""
+      sortKey: -1781380934712
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "adminactualizado",
+          "password": "NuevaPass123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/api/auth/profile
+    name: profile
+    meta:
+      id: req_7d40c37a6e0149808366a9f9ee6e13c8
+      created: 1781380987218
+      modified: 1781381407871
+      isPrivate: false
+      description: ""
+      sortKey: -1781380987218
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzgwOTY0LCJleHAiOjE3ODEzODQ1NjR9.sD8y2OS2UfiA_kZsGBDqWCPw0zEm6dGzL9HUkoxcaXk
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/api/auth/update/profile
+    name: updateprofile
+    meta:
+      id: req_e3ac0670c3e04ed59fab2aa3fe8019f7
+      created: 1781381301574
+      modified: 1781381414847
+      isPrivate: false
+      description: ""
+      sortKey: -1781381301574
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "adminactualizado",
+          "name": "Daniel",
+          "surname": "Martinez",
+          "email": "danielactualizado@gmail.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzgwOTY0LCJleHAiOjE3ODEzODQ1NjR9.sD8y2OS2UfiA_kZsGBDqWCPw0zEm6dGzL9HUkoxcaXk
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/api/auth/update/password
+    name: updatepassword
+    meta:
+      id: req_c4bdfd9ddfef4138a17b4978c9308fb9
+      created: 1781381427222
+      modified: 1781381540851
+      isPrivate: false
+      description: ""
+      sortKey: -1781381427222
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "oldpassword": "Admin123!",
+          "newpassword": "NuevaPass123!",
+          "confirmpassword": "NuevaPass123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzgxMzQ4LCJleHAiOjE3ODEzODQ5NDh9.eSW85Tg_q3rlJbq6F11I5eOP8wD6Ac56opukFhc7yW8
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:4000/api/auth/login
+    name: testinglogin
+    meta:
+      id: req_3928bb63e8c342dbac47fee5920297fd
+      created: 1781381594253
+      modified: 1781381664306
+      isPrivate: false
+      description: ""
+      sortKey: -1781381594253
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "adminactualizado",
+          "password": "Admin123!"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: financia
+    meta:
+      id: fld_f7abd687620f4008b1cad63bffcb6541
+      created: 1781384635400
+      modified: 1781385123099
+      sortKey: -1781384635400
+      description: ""
+    children:
+      - url: http://localhost:4000/api/finanzas/cuentas
+        name: first account
+        meta:
+          id: req_082e0fcf5af94e958f28ec715418cdb4
+          created: 1781384653650
+          modified: 1781384839551
+          isPrivate: false
+          description: ""
+          sortKey: -1781384653650
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "alias": "Cuenta Principal",
+              "currency": "USD",
+              "type": "AHORRO"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/cuentas
+        name: second account
+        meta:
+          id: req_1b6daa6d1f684abfad47c74b70e733d2
+          created: 1781384842951
+          modified: 1781384882556
+          isPrivate: false
+          description: ""
+          sortKey: -1781384842951
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "alias": "Cuenta Ahorro",
+              "currency": "EUR",
+              "type": "CORRIENTE"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/cuentas?page=0&size=10
+        name: listid
+        meta:
+          id: req_075acfa7e4a44694a886fec07ca3f264
+          created: 1781384957553
+          modified: 1781385119598
+          isPrivate: false
+          description: ""
+          sortKey: -1781384957553
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/transferencias
+        name: transfer
+        meta:
+          id: req_2b5ad77d38cf4ab7a340b9b52475782b
+          created: 1781385123906
+          modified: 1781385166720
+          isPrivate: false
+          description: ""
+          sortKey: -1781385123906
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "sourceAccountId": 1,
+              "destinationAccountId": 2,
+              "amount": 100.00,
+              "exchangeRate": 0.92,
+              "description": "Transferencia de prueba"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/cuentas?page=0&size=10
+        name: verifybalance
+        meta:
+          id: req_b6097a4e55004c3abbd7209708d9faff
+          created: 1781385271736
+          modified: 1781385301838
+          isPrivate: false
+          description: ""
+          sortKey: -1781385271736
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/movimientos?page=0&size=10
+        name: list movements
+        meta:
+          id: req_793accf42d5d46e98135dce7e34e8669
+          created: 1781385337228
+          modified: 1781385419315
+          isPrivate: false
+          description: ""
+          sortKey: -1781385337228
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/categorias?page=0&size=10
+        name: list categories
+        meta:
+          id: req_59ef25608f9c4f43b6f083cb2b6fc404
+          created: 1781385430601
+          modified: 1781385475069
+          isPrivate: false
+          description: ""
+          sortKey: -1781385430601
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4000/api/finanzas/transferencias
+        name: testing issues
+        meta:
+          id: req_bfe69cca5b9d457a96af0da8712da2a2
+          created: 1781385566147
+          modified: 1781385626011
+          isPrivate: false
+          description: ""
+          sortKey: -1781385566147
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "sourceAccountId": 1,
+              "destinationAccountId": 1,
+              "amount": 10.00,
+              "exchangeRate": 1,
+              "description": "Cuenta repetida"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiaWF0IjoxNzgxMzg0Nzk1LCJleHAiOjE3ODEzODgzOTV9.J1QO0ZZE81jKQZ9GXS_FQETIfmLG17y2DJiBf0CEyts
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_aa9ea29d5b306e085b032ad5bdb799e56519b562
+    created: 1781380717394
+    modified: 1781380717394
+environments:
+  name: Base Environment
+  meta:
+    id: env_aa9ea29d5b306e085b032ad5bdb799e56519b562
+    created: 1781380717391
+    modified: 1781380717391
+    isPrivate: false

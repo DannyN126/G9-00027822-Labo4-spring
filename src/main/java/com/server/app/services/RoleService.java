@@ -72,4 +72,11 @@ public class RoleService {
     }
     return roleRepository.save(role);
   }
+  @Transactional
+  public void delete(Long id) {
+    Role role = roleRepository.findById(id)
+            .orElseThrow(() -> new NotFoundException("Role not found"));
+
+    roleRepository.delete(role);
+  }
 }

@@ -17,9 +17,12 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
-    @Column(unique = true, nullable = false)
+    @Column(
+            unique = true,
+            nullable = false
+    )
     private String username;
 
     @Column
@@ -28,7 +31,10 @@ public class User {
     @Column
     private String surname;
 
-    @Column(unique = true, nullable = false)
+    @Column(
+            unique = true,
+            nullable = false
+    )
     private String email;
 
     @Column(nullable = false)
@@ -40,15 +46,21 @@ public class User {
     @Builder.Default
     private boolean blocked = false;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
+    private Role role;
+
     @PrePersist
     @PreUpdate
     private void encryptPassword() {
-        if (password != null && !password.startsWith("$2a$")) {
-            this.password = new BCryptPasswordEncoder().encode(this.password);
+        if (
+                password != null
+                        && !password.startsWith("$2a$")
+                        && !password.startsWith("$2b$")
+                        && !password.startsWith("$2y$")
+        ) {
+            this.password =
+                    new BCryptPasswordEncoder().encode(password);
         }
     }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id", nullable = true)
-    private Role role;
 }

@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.server.app.entities.Permission;
 
-@EnableJpaRepositories
+
 public interface PermissionRepository extends JpaRepository<Permission, Long> {
     Page<Permission> findAll(Pageable pageable);
 
